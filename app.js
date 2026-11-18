@@ -158,4 +158,65 @@ if ("serviceWorker" in navigator) {
   window.addEventListener("load",() => {
     navigator.serviceWorker.register("./sw.js").catch(console.error);
   });
-}
+
+  
+
+/* PROJECT OVERDRIVE V2 */
+(() => {
+  if (document.getElementById("overdriveSearch")) return;
+
+  const search = document.createElement("input");
+  search.id = "overdriveSearch";
+  search.type = "search";
+  search.placeholder = "SEARCH YOUR LOCKER...";
+  search.style.cssText =
+    "width:100%;padding:14px;margin:12px 0;background:#151515;color:white;border:1px solid #ff3030;border-radius:10px;font-size:16px;";
+
+  locker.parentNode.insertBefore(search, locker);
+
+  const rarityColors = {
+    Common: "#a0a0a0",
+    Uncommon: "#39c65b",
+    Rare: "#399bff",
+    Epic: "#b45cff",
+    Legendary: "#ffad32",
+    Mythic: "#ff4545"
+  };
+
+  function upgradeCards() {
+    locker.querySelectorAll(".item").forEach(card => {
+      const name = card.querySelector("h3")?.textContent || "";
+      const item = items.find(entry => entry.name === name);
+
+      if (item) {
+        card.style.border = "1px solid " +
+          (rarityColors[item.rarity] || "#ff3030");
+
+        if (!card.querySelector(".v2-rarity")) {
+          const badge = document.createElement("small");
+          badge.className = "v2-rarity";
+          badge.textContent = item.rarity || "Uncommon";
+          badge.style.cssText =
+            "display:block;margin:8px 0;color:" +
+            (rarityColors[item.rarity] || "#39c65b") +
+            ";font-weight:bold;";
+          card.appendChild(badge);
+        }
+
+        card.style.display =
+          name.toLowerCase().includes(search.value.toLowerCase())
+          ? ""
+          : "none";
+      }
+    });
+  }
+
+  search.addEventListener("input", upgradeCards);
+
+  new MutationObserver(upgradeCards).observe(locker, {
+    childList: true,
+    subtree: true
+  });
+
+  upgradeCards();
+})();

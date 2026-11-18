@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #ff2638;
+  --bg: #080808;
+  --panel: #151515;
+  --muted: #999;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  border-bottom: 1px solid #292929;
+  background: #101010;
+  gap: 10px;
+}
+
+.logo {
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.logo span,
+h1 span {
+  color: var(--red);
+}
+
+.status {
+  color: #69ff9a;
+  font-size: 10px;
+}
+
+main {
+  width: min(100% - 28px, 900px);
+  margin: auto;
+}
+
+.hero {
+  padding: 55px 10px 35px;
+}
+
+.eyebrow {
+  color: var(--red);
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: clamp(55px, 15vw, 100px);
+  line-height: .85;
+  margin: 20px 0;
+  font-weight: 1000;
+  letter-spacing: -4px;
+}
+
+.subtitle {
+  color: var(--muted);
+}
+
+button {
+  background: var(--red);
+  color: white;
+  border: 0;
+  padding: 13px 18px;
+  border-radius: 5px;
+  font-weight: 900;
+  cursor: pointer;
+  margin: 5px 4px 5px 0;
+}
+
+button:active {
+  transform: scale(.97);
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid #292929;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 18px 0;
+}
+
+h2 {
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin: 8px 0;
+  color: white;
+  background: #080808;
+  border: 1px solid #393939;
+  border-radius: 6px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+#itemCount {
+  color: var(--red);
+  font-size: 11px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.filter {
+  background: #292929;
+  font-size: 10px;
+}
+
+.filter.active {
+  background: var(--red);
+}
+
+.locker {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.item {
+  background: #202020;
+  border: 1px solid #363636;
+  padding: 16px 12px;
+  border-radius: 9px;
+  min-height: 110px;
+}
+
+.item h3 {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.item p {
+  color: #aaa;
+  font-size: 11px;
+}
+
+.item button {
+  font-size: 10px;
+  padding: 9px;
+}
+
+.favorites,
+.loadouts {
+  color: #aaa;
+  font-size: 13px;
+}
+
+footer {
+  padding: 30px 15px;
+  text-align: center;
+  color: #777;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 650px) {
+  .locker {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

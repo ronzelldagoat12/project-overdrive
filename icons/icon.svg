@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="110" fill="#080808"/>
+  <path d="M100 120 L220 120 L300 256 L220 392 L100 392 L180 256 Z" fill="#ff2638"/>
+  <path d="M270 120 L412 120 L332 256 L412 392 L270 392 L350 256 Z" fill="#ffffff"/>
+  <text x="256" y="465" font-family="Arial" font-size="35" font-weight="bold" text-anchor="middle" fill="#ff2638">OVRDRIVE</text>
+</svg>

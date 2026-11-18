@@ -1,0 +1,19 @@
+{
+  "name": "Project Overdrive",
+  "short_name": "Overdrive",
+  "description": "Independent cosmetic locker companion",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#080808",
+  "theme_color": "#ff2638",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

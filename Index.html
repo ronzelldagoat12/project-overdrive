@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="theme-color" content="#080808">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="apple-mobile-web-app-title" content="Overdrive">
+
+  <title>PROJECT OVERDRIVE</title>
+
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+  <header class="topbar">
+
+    <div class="logo">PROJECT <span>OVERDRIVE</span></div>
+
+    <div class="status">● SYSTEM ONLINE</div>
+
+  </header>
+
+  <main>
+
+    <section class="hero">
+
+      <p class="eyebrow">IOS COSMETIC COMPANION</p>
+
+      <h1>YOUR<br><span>LOCKER.</span></h1>
+
+      <p class="subtitle">Your collection. Your style. Your loadouts.</p>
+
+      <button id="addFavorite">＋ ADD FAVORITE</button>
+
+    </section>
+
+    <section class="profile panel">
+
+      <h2>PLAYER PROFILE</h2>
+
+      <input id="playerName" placeholder="Enter player name" maxlength="24">
+
+      <p id="welcome">WELCOME, PLAYER</p>
+
+    </section>
+
+    <section class="panel">
+
+      <div class="section-heading">
+
+        <h2>CHARACTER LOCKER</h2>
+
+        <span id="itemCount">0 ITEMS</span>
+
+      </div>
+
+      <div class="filters">
+
+        <button class="filter active" data-filter="All">ALL</button>
+
+        <button class="filter" data-filter="Outfit">OUTFITS</button>
+
+        <button class="filter" data-filter="Back Bling">BACK BLING</button>
+
+        <button class="filter" data-filter="Pickaxe">PICKAXES</button>
+
+      </div>
+
+      <div id="locker" class="locker"></div>
+
+    </section>
+
+    <section class="panel">
+
+      <h2>FAVORITES</h2>
+
+      <div id="favorites" class="favorites">No favorites saved yet.</div>
+
+    </section>
+
+    <section class="panel">
+
+      <h2>MY LOADOUTS</h2>
+
+      <input id="loadoutName" placeholder="Loadout name">
+
+      <button id="saveLoadout">SAVE LOADOUT</button>
+
+      <div id="loadouts" class="loadouts"></div>
+
+    </section>
+
+  </main>
+
+  <footer>PROJECT OVERDRIVE · INDEPENDENT FAN COMPANION</footer>
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>

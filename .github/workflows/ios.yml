@@ -23,7 +23,7 @@ jobs:
         run: npm run build
 
       - name: Add iOS platform
-        run: npx --yes @capacitor/cli add ios
+        run: npx --yes --package=@capacitor/cli@7.4.3 cap add ios
 
       - name: Sync iOS
         run: npx cap sync ios

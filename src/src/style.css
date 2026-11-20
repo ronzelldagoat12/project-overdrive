@@ -1,0 +1,50 @@
+
+* {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: none;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #87ceeb;
+}
+
+#game, canvas {
+  width: 100vw;
+  height: 100dvh;
+}
+
+.controls {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.joystick {
+  position: absolute;
+  bottom: 45px;
+  left: 35px;
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  background: #ffffff35;
+  border: 3px solid #ffffff99;
+  pointer-events: auto;
+}
+
+.action {
+  position: absolute;
+  right: 28px;
+  bottom: 65px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: #e64b35;
+  color: white;
+  border: 3px solid white;
+  font-weight: bold;
+  pointer-events: auto;
+}

@@ -1,0 +1,17 @@
+
+{
+  "name": "project-overdrive-c2s4",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Project Overdrive Chapter 2 Season 4 iOS game",
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@capacitor/core": "^7.4.3",
+    "@capacitor/ios": "^7.4.3",
+    "vite": "^6.3.5",
+    "three": "^0.176.0"
+  },
+  "devDependencies": {}
+}

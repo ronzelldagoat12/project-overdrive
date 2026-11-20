@@ -1,0 +1,9 @@
+
+{
+  "appId": "com.projectoverdrive.c2s4",
+  "appName": "Project Overdrive C2S4",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}

@@ -27,12 +27,6 @@ jobs:
 
       - name: Sync iOS
         run: npx cap sync ios
-    
-              - name: Install CocoaPods
-        run: |
-          cd ios/App
-          pod install
-          cd ../..
       - name: Build unsigned IPA
         run: |
           xcodebuild -workspace ios/App/App.xcworkspace \

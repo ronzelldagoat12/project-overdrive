@@ -27,7 +27,25 @@ jobs:
 
       - name: Sync iOS
         run: npx cap sync ios
+      - name: Build unsigned IPA
+        run: |
+          xcodebuild -project ios/App/App.xcodeproj \
+            -scheme App \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO build
 
+          mkdir -p Payload
+          cp -R build/Build/Products/Release-iphoneos/App.app Payload/
+          zip -r Project-Overdrive.ipa Payload
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: Project-Overdrive-IPA
+          path: Project-Overdrive.ipa
       - name: Upload iOS project
         uses: actions/upload-artifact@v4
         with:
